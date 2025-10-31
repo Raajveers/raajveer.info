@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Raajveer Sutar • Data Engineer</title>
+  <meta name="description" content="Raajveer Sutar — Data Engineer. Resume, projects, GitHub and LinkedIn.">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+  <style>
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --card:#0b1320;
+      --accent:#17b890; /* teal */
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.06);
+      --glass-2: rgba(255,255,255,0.03);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,sans-serif;
+      background: radial-gradient(800px 400px at 10% 10%, rgba(23,184,144,0.08), transparent),
+                  linear-gradient(180deg,#071427 0%, #071427 50%, #071427 100%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:40px;
+    }
+
+    /* Layout */
+    .container{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:360px 1fr;gap:28px;align-items:start}
+
+    /* Left column */
+    .card-left{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow: 0 8px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+      position:relative;
+      min-height:480px;
+    }
+    .photo{
+      width:120px;height:120px;border-radius:12px;overflow:hidden;border:4px solid rgba(255,255,255,0.06);
+      box-shadow:0 6px 20px rgba(2,6,23,0.6);
+    }
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .name{font-family:Merriweather,serif;font-size:28px;margin-top:14px;letter-spacing:1px}
+    .role{color:var(--muted);font-weight:600;margin-top:6px;font-size:13px}
+
+    .contact-list{margin-top:18px;padding:0;list-style:none}
+    .contact-list li{display:flex;gap:10px;align-items:flex-start;padding:8px 0;color:var(--muted);font-size:14px}
+    .contact-list li i{width:20px;text-align:center;color:var(--accent)}
+
+    .section-title{margin-top:20px;margin-bottom:12px;color:var(--muted);font-weight:700;letter-spacing:1px;font-size:13px}
+    .skill{margin:10px 0}
+    .bar{height:10px;background:var(--glass-2);border-radius:999px;overflow:hidden}
+    .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#7dd3c6);border-radius:999px}
+
+    .left-footer{position:absolute;bottom:22px;left:28px;right:28px;font-size:13px;color:var(--muted)}
+
+    /* Right column */
+    .card-right{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));
+      border-radius:var(--radius);
+      padding:28px 34px;
+      min-height:480px;
+      box-shadow:0 8px 30px rgba(2,6,23,0.6);
+    }
+    .profile-title{display:flex;align-items:center;gap:18px}
+    .profile-title h1{margin:0;font-size:34px;letter-spacing:1px}
+    .profile-title p{margin:0;color:var(--muted);font-weight:600}
+
+    .divider{height:1px;background:linear-gradient(90deg,transparent,var(--glass),transparent);margin:16px 0}
+
+    .resume-frame{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.03)}
+    .resume-toolbar{display:flex;justify-content:space-between;padding:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.0));align-items:center}
+    .btn{background:var(--accent);border:none;color:#042;padding:10px 14px;border-radius:10px;font-weight:700;cursor:pointer}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);font-weight:600}
+
+    /* Projects & experience list */
+    .bullet-list{padding-left:18px;color:var(--muted)}
+    .bullet-list li{margin:8px 0}
+
+    /* responsive */
+    @media (max-width:980px){
+      .container{grid-template-columns:1fr;}
+      body{padding:18px}
+    }
+
+    /* little hover/animation */
+    a.social{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,0.02);text-decoration:none;color:inherit}
+    a.social:hover{transform:translateY(-3px)}
+
+  </style>
+</head>
+<body>
+  <main class="container">
+    <!-- LEFT -->
+    <aside class="card-left">
+      <div style="display:flex;gap:16px;align-items:center">
+        <div class="photo"><img src="/assets/profile.jpg" alt="Raajveer Sutar"></div>
+        <div>
+          <div class="name">Raajveer Sutar</div>
+          <div class="role">Data Engineer • 2.6 yrs</div>
+        </div>
+      </div>
+
+      <ul class="contact-list">
+        <li><i class="fas fa-phone"></i> <div>+91 9518939288</div></li>
+        <li><i class="fas fa-envelope"></i> <div>raajveersutar@gmail.com</div></li>
+        <li><i class="fas fa-map-marker-alt"></i> <div>New Sangvi, Pune, India</div></li>
+        <li><i class="fab fa-github"></i> <div><a href="https://github.com/Raajveers" target="_blank" style="color:inherit;text-decoration:underline">github.com/Raajveers</a></div></li>
+        <li><i class="fab fa-linkedin"></i> <div><a href="https://linkedin.com/in/raajveer-sutar" target="_blank" style="color:inherit;text-decoration:underline">linkedin.com/in/raajveer-sutar</a></div></li>
+        <li><i class="fas fa-globe"></i> <div><a href="https://raajveer.info" target="_blank" style="color:inherit;text-decoration:underline">raajveer.info</a></div></li>
+      </ul>
+
+      <div class="section-title">SKILLS</div>
+      <div class="skill">
+        <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--muted)"><span>Python & PySpark</span><span>90%</span></div>
+        <div class="bar"><i style="width:90%"></i></div>
+      </div>
+      <div class="skill">
+        <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--muted)"><span>AWS (S3/Glue)</span><span>80%</span></div>
+        <div class="bar"><i style="width:80%"></i></div>
+      </div>
+      <div class="skill">
+        <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--muted)"><span>ETL & Data Modeling</span><span>85%</span></div>
+        <div class="bar"><i style="width:85%"></i></div>
+      </div>
+
+      <div class="section-title">CERTIFICATIONS</div>
+      <ul style="color:var(--muted);padding-left:18px">
+        <li>Amazon Web Services (2021)</li>
+        <li>Java Full Stack (2023) - Symbiosis</li>
+      </ul>
+
+      <div class="left-footer">Available for freelance & remote roles • <a href="/assets/resume.pdf" download style="color:var(--accent);text-decoration:underline">Download PDF Resume</a></div>
+    </aside>
+
+    <!-- RIGHT -->
+    <section class="card-right">
+      <div class="profile-title">
+        <div>
+          <h1>RAAJVEER SUTAR</h1>
+          <p>Data Engineer — building reliable, efficient data platforms</p>
+        </div>
+        <div style="margin-left:auto;display:flex;gap:10px;align-items:center">
+          <a class="social" href="https://github.com/Raajveers/raajveer.info" target="_blank"><i class="fab fa-github"></i> View Repo</a>
+          <a class="social" href="https://raajveer.info" target="_blank"><i class="fas fa-globe"></i> raajveer.info</a>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <h3 style="margin:6px 0 12px 0">Profile</h3>
+      <p style="color:var(--muted);line-height:1.6">Data Engineer with 2.6 years of experience designing and implementing scalable data solutions across cloud environments. Proficient in Python, PySpark, AWS, SQL, and ETL pipelines, with strong expertise in data modeling, migration, and governance. Skilled at automating workflows using Docker, Jenkins, and Terraform and integrating software engineering best practices into data-driven systems.</p>
+
+      <div class="divider"></div>
+
+      <h3 style="margin:6px 0 12px 0">Work experience</h3>
+
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div>
+          <strong>Square Vision Technology</strong>
+          <div style="color:var(--muted);font-size:13px">Data Engineer • April 2023 - Present</div>
+        </div>
+        <div style="color:var(--muted);font-size:13px">2.6 yrs</div>
+      </div>
+
+      <ul class="bullet-list">
+        <li>Automated customer identification from logistics CSV/XLSX files, reducing manual effort by ~65%.</li>
+        <li>Stored incoming files in AWS S3 (Landing Zone) for structured organization and cost-efficient storage.</li>
+        <li>Built ETL pipelines, automated with Jenkins and Docker to reduce manual interventions by ~60%.</li>
+        <li>Used Terraform to provision infrastructure resources and improve deployment reliability by ~50%.</li>
+      </ul>
+
+      <div class="divider"></div>
+
+      <h3 style="margin:6px 0 12px 0">Resume viewer</h3>
+
+      <div class="resume-frame">
+        <div class="resume-toolbar">
+          <div style="display:flex;gap:10px;align-items:center">
+            <button class="btn" id="downloadBtn"><i class="fas fa-download"></i>&nbsp;Download</button>
+            <button class="btn ghost" id="openPdf">Open PDF</button>
+          </div>
+          <div style="color:var(--muted);font-size:13px">Hosted on <strong>raajveer.info</strong></div>
+        </div>
+        <!-- Embed PDF (fallback to image if not available) -->
+        <iframe id="pdfFrame" src="/assets/resume.pdf#toolbar=0" style="width:100%;height:520px;border:0;display:block"></iframe>
+      </div>
+
+      <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+        <a class="social" href="https://linkedin.com/in/raajveer-sutar" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a class="social" href="https://github.com/Raajveers" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a class="social" href="mailto:raajveersutar@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+      </div>
+
+    </section>
+  </main>
+
+  <script>
+    // Small UI behaviors
+    document.getElementById('downloadBtn').addEventListener('click', function(){
+      // try to download resume from assets/resume.pdf
+      const link = document.createElement('a');
+      link.href = '/assets/resume.pdf';
+      link.download = 'Raajveer_Sutar_Resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+    });
+
+    document.getElementById('openPdf').addEventListener('click', function(){
+      window.open('/assets/resume.pdf','_blank');
+    });
+
+    // Smooth scroll for anchor links (if you add nav later)
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+      });
+    });
+  </script>
+</body>
+</html>
